@@ -120,8 +120,8 @@ to the URL field; in the example above, this is http://172.17.8.101.
 #### Link Github with Docker
 On the Git Hub repository project home (https://github.com/<yourname>/docker-nginx-busybox), goto -> Settings (on the right) -> Webhooks & Services -> Add Service -> choose Docker -> enter your Docker Hub password and confirm
 
-#### Set Trigger on Docker
-On Docker Hub Home, left of your username -> Create -> Create Automated Build -> Choose your repository -> Enter short description (required) -> Create
+#### Create Create Automated Build on Docker Hub
+On Docker Hub Home, left of your username -> Create -> Create Automated Build -> Choose your git repository -> Enter short description (required) -> Create
 
 #### Test Triggered Build
 
@@ -153,3 +153,6 @@ on the docker host. The answer should look like
     </html>
     
 DONE.
+
+## Next Steps
+It is best practice to test any changes in a separate git repository branch, test it and, if successful, merge it to the master. Check out e.g. [this short Git tutorial](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging).
