@@ -18,7 +18,7 @@ If you are searching for more professional nginx images with prepared https supp
 ## Manually build a docker image
 (Status: tested successfully)
 
-### Clone and build the Image
+#### Clone and build the Image
 
 Clone your repository to a docker host. On the host, issue the commands (but replace "oveits" by your Docker Hub username)
 
@@ -38,7 +38,7 @@ should lead to an output similar to:
     REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
     nginx-busybox       latest              5c21ee35c67c        8 hours ago         7.898 MB
 
-### Start Container from the above created Image
+#### Start Container from the above created Image
 On the docker host, perform the command:
 
     docker run -d -p 80:80 nginx-busybox
@@ -49,7 +49,7 @@ Verify that the container has been created and is up and running:
     CONTAINER ID        IMAGE                  COMMAND             CREATED             STATUS              PORTS                         NAMES
     a8614bead979        nginx-busybox:latest   "/usr/sbin/nginx"   4 seconds ago       Up 3 seconds        0.0.0.0:80->80/tcp, 443/tcp   stoic_mestorf
 
-### Connect to the NginX reverse Proxy locally
+#### Connect to the NginX reverse Proxy locally
 On the docker host, the commands
 
     curl localhost
@@ -65,13 +65,17 @@ Should print the content of index.html to the screen:
     </body>
     </html>
 
-### Connect to the NginX reverse Proxy per Browser
-Linux:
+#### Connect to the NginX reverse Proxy per Browser
+This subchapter tries to give some insights on the reachability of your docker application. If you are interested more in automated builds, skip this chapter and go straigt to the next chapter.
+
+##### Linux:
+
 If you start a browser on the Linux docker host, use the URL 
 
     http://localhost
     
-Windows or iOS:
+##### Windows or iOS:
+
 On boot2docker hosts (Windows and iOS), find your docker host's IP address by issuing the command 
     
     boot2docker ip
