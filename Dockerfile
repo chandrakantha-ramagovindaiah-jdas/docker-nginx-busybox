@@ -11,4 +11,4 @@ ADD index.html /usr/html/index.html
 
 EXPOSE 80 443
 
-CMD ["/usr/sbin/nginx"]
+ENTRYPOINT ["/usr/sbin/nginx"]
